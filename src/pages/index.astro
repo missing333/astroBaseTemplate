@@ -152,6 +152,16 @@ import ContactCTA from '../components/ContactCTA.astro';
 		flex-wrap: wrap;
 	}
 
+	.btn-primary {
+		background-color: var(--primary);
+		color: var(--background);
+	}
+
+	.btn-primary:hover {
+		transform: scale(1.05);
+		box-shadow: 0 4px 8px rgba(0, 0, 0, .3);
+	}
+
 	.btn-secondary {
 		background-color: var(--background);
 		color: var(--text);
@@ -159,8 +169,8 @@ import ContactCTA from '../components/ContactCTA.astro';
 	}
 
 	.btn-secondary:hover {
-		transform: translateY(-2px);
-		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+		transform: scale(1.05);
+		box-shadow: 0 4px 8px rgba(0, 0, 0, .3);
 	}
 
 
@@ -237,6 +247,7 @@ import ContactCTA from '../components/ContactCTA.astro';
 
 	.services-link a:hover {
 		color: var(--secondary);
+		border-bottom: 2px solid var(--secondary);
 	}
 
 
@@ -273,15 +284,17 @@ import ContactCTA from '../components/ContactCTA.astro';
 	}
 
 	.learn-more {
-		display: inline-block;
 		color: var(--primary);
 		text-decoration: none;
 		font-weight: bold;
 		transition: color 0.3s;
+		padding-bottom: 2px;
+		border-bottom: 2px solid var(--primary);
 	}
 
 	.learn-more:hover {
-		text-decoration: underline;
+		color: var(--secondary);
+		border-bottom: 2px solid var(--secondary);
 	}
 
 

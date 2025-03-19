@@ -11,7 +11,15 @@
 	--primary-light: color-mix(in srgb, var(--primary), white 75%);
 	--primary-dark: color-mix(in srgb, var(--primary), black 25%);
   }
-  
+
+a {
+	color: inherit; /* Inherits color from parent */
+	text-decoration: none; /* Inherits text decoration from parent */
+  }
+
+  a:visited {
+	text-decoration: none; /* Inherits text decoration from parent */
+  }
 	
 	html,
 	body {
@@ -50,15 +58,13 @@
 	}
 
 	.btn-primary {
-		background-color: var(--primary);
-		color: var(--text);
+		color: var(--primary);
 		border: 3px solid var(--primary);
 	}
 
 	.btn-primary:hover {
-		background-color: var(--primary-light);
-		color: var(--text);
-		transform: translateY(-2px);
+		background-color: var(--primary);
+		color: var(--background);
 		border: 3px solid var(--primary);
 		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 	}
