@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-
+import ContactCTA from '../components/ContactCTA.astro';
 ---
 
 <Layout>
@@ -100,11 +100,14 @@ import Layout from '../layouts/Layout.astro';
 	</section>
 
 
-	<section class="contact-cta">
-		<h2>Ready to Get Started?</h2>
-		<p>Contact us today for a free quote on your project</p>
-		<a href="/contact" class="btn btn-primary">Contact Us</a>
-	</section>
+	<ContactCTA 
+		title="Ready to Get Started?" 
+		description="Contact us today for a free quote on your project" 
+		buttonText="Contact Us" 
+		buttonLink="/contact" 
+	/>
+	
+
 </Layout>
 
 
@@ -317,15 +320,6 @@ import Layout from '../layouts/Layout.astro';
 		color: var(--secondary-color);
 	}
 
-	.contact-cta {
-		text-align: center;
-		background-color: var(--primary-color);
-		color: var(--text-light);
-		padding: 3rem 1rem;
-		max-width: 900px;
-		position: relative;
-		overflow: hidden;
-	}
 
 
 
