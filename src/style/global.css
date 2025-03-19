@@ -1,14 +1,15 @@
 
   :root {
-    --text: #0a0805;
-    --background: #c9c9c9;
-	--background-alt: #f1f1f1;
-	--background-alt-alt: #686868;
-    --primary: #ff7700;
-	--primary-light: color-mix(in srgb, var(--primary), white 35%);
+	--text: #1a0909;
+	--background: #fbf2f2;
+	--primary: #ff7700;
+	--secondary: #dfc89f;
+	--accent: #d1c575;
+	
+
+	/* calculated colors */
+	--primary-light: color-mix(in srgb, var(--primary), white 75%);
 	--primary-dark: color-mix(in srgb, var(--primary), black 25%);
-    --secondary: #98c6cd;
-    --accent: #8684c2;
   }
   
 	
@@ -51,12 +52,14 @@
 	.btn-primary {
 		background-color: var(--primary);
 		color: var(--text);
+		border: 3px solid var(--primary);
 	}
 
 	.btn-primary:hover {
 		background-color: var(--primary-light);
 		color: var(--text);
 		transform: translateY(-2px);
+		border: 3px solid var(--primary);
 		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 	}
 	
