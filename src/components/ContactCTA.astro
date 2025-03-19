@@ -1,4 +1,6 @@
 ---
+import '../style/global.css';
+
 interface Props {
   title?: string;
   description?: string;
@@ -22,9 +24,8 @@ const {
 
 <style>
   .contact-cta {
+    background-color: var(--background-alt);
     text-align: center;
-    background-color: var(--primary-color);
-    color: var(--text-light);
     max-width: 900px;
     position: relative;
     overflow: hidden;
@@ -34,9 +35,6 @@ const {
     justify-self: center;
   }
 
-  .contact-cta h2 {
-    color: var(--text-light);
-  }
 
   .btn {
     display: inline-block;
@@ -44,16 +42,18 @@ const {
     border-radius: 4px;
     text-decoration: none;
     font-weight: bold;
-    transition: all 0.3s ease;
   }
 
   .btn-primary {
-    background-color: var(--accent-color);
-    color: var(--text-color);
+    background-color: var(--primary);
+    color: var(--text);
+    font-size: 1.33rem;
+    transition: all 0.3s ease;
   }
 
   .btn-primary:hover {
-    background-color: #e6a61d;
+    background-color: var(--primary-light);
+    color: var(--text);
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }

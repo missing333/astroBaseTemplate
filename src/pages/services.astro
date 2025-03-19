@@ -4,8 +4,8 @@ import ContactCTA from '../components/ContactCTA.astro';
 ---
 
 <Layout>
-    <div class="services-header">
-        <h1>Our <span>Services</span></h1>
+    <div class="page-header">
+        <h1>Our <span class="title-span">Services</span></h1>
         <p>Professional handyman services for all your home repair needs</p>
     </div>
 
@@ -124,21 +124,8 @@ import ContactCTA from '../components/ContactCTA.astro';
 </Layout>
 
 <style>
-    .services-header {
-        text-align: center;
-        padding: 2rem 1rem;
-        background-color: var(--background-color);
-        color: var(--primary-color);
-    }
 
-    .services-header h1 {
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
-    }
 
-    h1 span, h2 span {
-        color: var(--accent-color-alt);
-    }
 
     .services-section {
         max-width: 900px;
@@ -150,8 +137,8 @@ import ContactCTA from '../components/ContactCTA.astro';
     }
 
     .service-category h2 {
-        color: var(--primary-color);
-        border-bottom: 2px solid var(--accent-color-alt);
+        color: var(--primary);
+        border-bottom: 2px solid var(--secondary);
         padding-bottom: 0.5rem;
         margin-bottom: 1.5rem;
         position: relative;
@@ -164,7 +151,7 @@ import ContactCTA from '../components/ContactCTA.astro';
     }
 
     .service-item {
-        background-color: var(--text-light);
+        background-color: white;
         padding: 1.5rem;
         margin: 1rem;
         border-radius: 8px;
@@ -187,36 +174,11 @@ import ContactCTA from '../components/ContactCTA.astro';
     }
 
     .service-item h3 {
-        color: var(--primary-color);
+        color: var(--primary);
         margin-bottom: 0.5rem;
     }
 
 
-    .cta-content h2 {
-        font-size: 2rem;
-        margin-bottom: 1rem;
-    }
-
-    .btn {
-        display: inline-block;
-        padding: 0.75rem 1.5rem;
-        border-radius: 4px;
-        text-decoration: none;
-        font-weight: bold;
-        transition: all 0.3s ease;
-        margin-top: 1.5rem;
-    }
-
-    .btn-primary {
-        background-color: var(--accent-color);
-        color: var(--text-color);
-    }
-
-    .btn-primary:hover {
-        background-color: #e67e00;
-        transform: translateY(-2px);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
 
     @media (max-width: 768px) {
         .services-list {

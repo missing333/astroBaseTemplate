@@ -5,13 +5,13 @@ import ContactCTA from '../components/ContactCTA.astro';
 
 <Layout>
 	<section class="hero" style="max-width: 100%;">
+		<img src="/Hlogo.svg" alt="Handyman Hinchman Logo" class="hero-logo" width="300">
 		<div class="hero-content">
 			<!-- hero logo -->
-			<img src="/Hlogo.svg" alt="Handyman Hinchman Logo" class="hero-logo" width="300">
-			<h1>Professional Handyman Services</h1>
-			<p>Quality repairs and improvements for your home or business</p>
+			<h1>Need minor home repairs?</h1>
+			<p>We are cheaper than a specialty contractor!</p>
 			<div class="cta-buttons">
-				<a href="/contact" class="btn btn-primary">Get a Quote</a>
+				<a href="/pricing" class="btn btn-primary">Flat Pricing</a>
 				<a href="/services" class="btn btn-secondary">Our Services</a>
 			</div>
 		</div>
@@ -112,16 +112,24 @@ import ContactCTA from '../components/ContactCTA.astro';
 <style>
 
 	.hero {
-		background-color: var(--primary-color);
-		color: var(--text-light);
+		color: var(--text);
 		padding: 4rem 1rem;
 		text-align: center;
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: center;
+		align-items: center;
 	}
 
 	.hero-content {
 		max-width: 800px;
 		margin: 0 auto;
 	}
+
+	.hero img {
+		padding: 0 5rem;
+	}
+
 
 	.hero h1 {
 		font-size: 3rem;
@@ -140,30 +148,9 @@ import ContactCTA from '../components/ContactCTA.astro';
 		flex-wrap: wrap;
 	}
 
-	.btn {
-		display: inline-block;
-		padding: 0.75rem 1.5rem;
-		border-radius: 4px;
-		text-decoration: none;
-		font-weight: bold;
-		transition: all 0.3s ease;
-	}
-
-	.btn-primary {
-		background-color: var(--accent-color);
-		color: var(--text-color);
-	}
-
-	.btn-primary:hover {
-		background-color: #e6a61d;
-		transform: translateY(-2px);
-		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-	}
-
 	.btn-secondary {
-		background-color: transparent;
-		color: var(--text-light);
-		border: 2px solid var(--text-light);
+		background-color: var(--lightgray);
+		color: var(--text);
 	}
 
 	.btn-secondary:hover {
@@ -172,16 +159,12 @@ import ContactCTA from '../components/ContactCTA.astro';
 		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 	}
 
-	section {
-		padding: 2rem;
-		margin: 0 auto;
-		max-width: 1200px;
-	}
+
 
 	h2 {
 		text-align: center;
 		margin-bottom: 2rem;
-		color: var(--primary-color);
+		color: var(--text);
 		position: relative;
 		padding-bottom: 0.5rem;
 	}
@@ -192,9 +175,9 @@ import ContactCTA from '../components/ContactCTA.astro';
 		bottom: 0;
 		left: 50%;
 		transform: translateX(-50%);
-		width: 80px;
+		width: 180px;
 		height: 3px;
-		background-color: var(--accent-color);
+		background-color: var(--accent);
 	}
 
 	.services-grid, .testimonial-grid, .service-area-grid {
@@ -228,7 +211,7 @@ import ContactCTA from '../components/ContactCTA.astro';
 	}
 
 	.service-card h3 {
-		color: var(--primary-color);
+		color: var(--primary);
 		margin-bottom: 0.5rem;
 	}
 
@@ -238,26 +221,26 @@ import ContactCTA from '../components/ContactCTA.astro';
 	}
 
 	.services-link a {
-		color: var(--primary-color);
+		color: var(--primary);
 		text-decoration: none;
 		font-weight: bold;
 		transition: color 0.3s;
 		padding-bottom: 2px;
-		border-bottom: 2px solid var(--primary-color);
+		border-bottom: 2px solid var(--primary);
 	}
 
 	.services-link a:hover {
-		color: var(--accent-color);
+		color: var(--secondary);
 	}
 
+
+
+
+	/* //////////////About Preview////////////// */
 	.about-preview {
-		background-color: var(--primary-color);
+		background-color: color-mix(in srgb, var(--primary), white 85%);
 		padding: 3rem 1rem;
-		color: var(--text-light);
-	}
-
-	.about-preview h2 {
-		color: var(--text-light);
+		display: flex;
 	}
 
 	.about-content {
@@ -268,6 +251,8 @@ import ContactCTA from '../components/ContactCTA.astro';
 	.benefits-list {
 		margin: 2rem 0;
 		padding-left: 1.5rem;
+		align-items: center;
+		justify-content: center;
 	}
 
 	.benefits-list li {
@@ -276,12 +261,12 @@ import ContactCTA from '../components/ContactCTA.astro';
 	}
 
 	.benefits-list li::marker {
-		color: var(--accent-color);
+		color: var(--darkgray);
 	}
 
 	.learn-more {
 		display: inline-block;
-		color: var(--accent-color);
+		color: var(--primary);
 		text-decoration: none;
 		font-weight: bold;
 		transition: color 0.3s;
@@ -291,34 +276,10 @@ import ContactCTA from '../components/ContactCTA.astro';
 		text-decoration: underline;
 	}
 
-	.testimonial-card {
-		background-color: #f9fafb;
-		border-radius: 8px;
-		padding: 1.5rem;
-		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-		position: relative;
-	}
-
-	.testimonial-card::before {
-		content: '"';
-		position: absolute;
-		top: -5px;
-		left: 10px;
-		font-size: 4rem;
-		color: var(--accent-color);
-		opacity: 0.3;
-		font-family: serif;
-	}
-
-	.customer-name {
-		font-weight: bold;
-		text-align: right;
-		color: var(--secondary-color);
-	}
 
 
-
-
+	
+	/* //////////////Service Areas////////////// */
 	.service-areas {
 		padding: 3rem 1rem;
 		border-radius: 8px;
@@ -342,9 +303,37 @@ import ContactCTA from '../components/ContactCTA.astro';
 		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 	}
 
-	.contact-cta h2 {
-		color: var(--text-light);
+
+
+	/* //////////////Testimonials////////////// */
+	.testimonial-card {
+		background-color: #f9fafb;
+		border-radius: 8px;
+		padding: 1.5rem;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		position: relative;
 	}
+
+	.testimonial-card::before {
+		content: '"';
+		position: absolute;
+		top: -5px;
+		left: 10px;
+		font-size: 4rem;
+		color: var(--primary);
+		opacity: 0.3;
+		font-family: serif;
+	}
+
+	.customer-name {
+		font-weight: bold;
+		text-align: right;
+		color: var(--primary);
+	}
+
+
+
+
 
 	@media (max-width: 768px) {
 		.logo {
