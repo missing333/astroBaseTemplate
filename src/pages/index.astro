@@ -4,7 +4,7 @@ import ContactCTA from '../components/ContactCTA.astro';
 ---
 
 <Layout>
-	<section class="hero" style="max-width: 100%;">
+	<section class="hero">
 		<div class="hero-content">
 			<!-- hero logo -->
 			<h1>Need minor home repairs?</h1>
@@ -14,7 +14,7 @@ import ContactCTA from '../components/ContactCTA.astro';
 				<a href="/services" class="btn btn-secondary">Our Services</a>
 			</div>
 		</div>
-		<img src="/Hlogo.svg" alt="Handyman Hinchman Logo" class="hero-logo" width="300">
+		<div class="hero-logo"></div>
 	</section>
 
 
@@ -117,21 +117,34 @@ import ContactCTA from '../components/ContactCTA.astro';
 
 	.hero {
 		color: var(--text);
-		padding: 2rem 1rem;
+		padding: 0 1rem 3rem 1rem;
 		text-align: center;
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		align-items: center;
-	}
-
-	.hero-content {
-		max-width: 800px;
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+		position: relative;
+		max-width: 1200px;
 		margin: 0 auto;
 	}
 
-	.hero img {
-		padding: 0 5rem;
+	.hero-content {
+		grid-column: 1 / 2;
+		grid-row: 1;
+		z-index: 2;
+		padding: 2rem;
+		margin: auto;
+		margin-right: -90px; /* Creates overlap */
+	}
+
+	.hero-logo{
+		grid-column: 2 / 3;
+		grid-row: 1;
+		padding: 0 3rem;
+		height: 500px;
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 40% 100%);
+		opacity: 0.75;
+		background-image: url('../assets/images/handwash.png');
+		background-size: cover;
+		background-position: center;
 	}
 
 
@@ -361,7 +374,21 @@ import ContactCTA from '../components/ContactCTA.astro';
 		}
 
 		.hero {
-			flex-direction: column;
+        grid-template-columns: 1fr; /* Change to single column */
+		}
+		
+		.hero-content {
+			grid-column: 1; /* Span the only column */
+			grid-row: 1;
+			margin: auto; /* Remove the overlap */
+			padding: 1rem;
+		}
+		
+		.hero-logo {
+			grid-column: 1; /* Span the only column */
+			grid-row: 2; /* Place below content */
+			margin-top: 1rem;
+			height: 300px; /* Shorter height on mobile */
 		}
 		
 		.hero h1 {
