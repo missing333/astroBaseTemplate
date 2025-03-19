@@ -1,0 +1,380 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+---
+
+<Layout>
+	<section class="hero" style="max-width: 100%;">
+		<div class="hero-content">
+			<!-- hero logo -->
+			<img src="/Hlogo.svg" alt="Handyman Hinchman Logo" class="hero-logo" width="300">
+			<h1>Professional Handyman Services</h1>
+			<p>Quality repairs and improvements for your home or business</p>
+			<div class="cta-buttons">
+				<a href="/contact" class="btn btn-primary">Get a Quote</a>
+				<a href="/services" class="btn btn-secondary">Our Services</a>
+			</div>
+		</div>
+	</section>
+
+	<section class="services-preview">
+		<h2>Our Services</h2>
+		<div class="services-grid">
+			<div class="service-card">
+				<div class="service-icon">🔧</div>
+				<h3>Plumbing</h3>
+				<p>Fixing leaky faucets, toilet replacement, and more</p>
+			</div>
+			<div class="service-card">
+				<div class="service-icon">💡</div>
+				<h3>Electrical</h3>
+				<p>Outlet replacement, lightswitch installation, lighting fixes</p>
+			</div>
+			<div class="service-card">
+				<div class="service-icon">🌳</div>
+				<h3>Outdoor</h3>
+				<p>Tree trimming, power washing, deck repairs</p>
+			</div>
+			<div class="service-card">
+				<div class="service-icon">🪑</div>
+				<h3>Assembly</h3>
+				<p>Furniture assembly, shelving installation</p>
+			</div>
+		</div>
+		<div class="services-link">
+			<a href="/services">View All Services</a>
+		</div>
+	</section>
+
+	<section class="about-preview">
+		<div class="about-content">
+			<h2>Why Choose Handyman Hinchman?</h2>
+			<ul class="benefits-list">
+				<li>Over 15 years of experience</li>
+				<li>Competitive and transparent pricing</li>
+				<li>Satisfaction guaranteed</li>
+			</ul>
+			<a href="/about" class="learn-more">Learn More About Us</a>
+		</div>
+	</section>
+
+	
+	<section class="service-areas">
+		<h2>Service Areas</h2>
+		<div class="service-area-grid">
+			<div class="service-area-card">
+				<h3>Gilbert, AZ</h3>	
+			</div>
+			<div class="service-area-card">
+				<h3>Chandler, AZ</h3>	
+			</div>
+			<div class="service-area-card">
+				<h3>Queen Creek, AZ</h3>	
+			</div>
+			<div class="service-area-card">
+				<h3>San Tan Valley, AZ</h3>	
+			</div>
+			<div class="service-area-card">
+				<h3>Mesa, AZ</h3>	
+			</div>
+			<div class="service-area-card">
+				<h3>Tempe, AZ</h3>	
+			</div>
+		</div>
+	</section>
+
+
+
+	<section class="testimonials">
+		<h2>What Our Customers Say</h2>
+		<div class="testimonial-grid">
+			<div class="testimonial-card">
+				<p>"David from Handyman Hinchman fixed our leaking sink in no time. Professional, clean, and fair pricing. Highly recommend!"</p>
+				<p class="customer-name">- Sarah T.</p>
+			</div>
+			<div class="testimonial-card">
+				<p>"I had multiple electrical issues that other companies couldn't solve. Handyman Hinchman identified and fixed everything in one visit!"</p>
+				<p class="customer-name">- Michael R.</p>
+			</div>
+		</div>
+	</section>
+
+
+	<section class="contact-cta">
+		<h2>Ready to Get Started?</h2>
+		<p>Contact us today for a free quote on your project</p>
+		<a href="/contact" class="btn btn-primary">Contact Us</a>
+	</section>
+</Layout>
+
+
+
+
+<style>
+
+	.hero {
+		background-color: var(--primary-color);
+		color: var(--text-light);
+		padding: 4rem 1rem;
+		text-align: center;
+	}
+
+	.hero-content {
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	.hero h1 {
+		font-size: 3rem;
+		margin-bottom: 1rem;
+	}
+
+	.hero p {
+		font-size: 1.5rem;
+		margin-bottom: 2rem;
+	}
+
+	.cta-buttons {
+		display: flex;
+		justify-content: center;
+		gap: 1rem;
+		flex-wrap: wrap;
+	}
+
+	.btn {
+		display: inline-block;
+		padding: 0.75rem 1.5rem;
+		border-radius: 4px;
+		text-decoration: none;
+		font-weight: bold;
+		transition: all 0.3s ease;
+	}
+
+	.btn-primary {
+		background-color: var(--accent-color);
+		color: var(--text-color);
+	}
+
+	.btn-primary:hover {
+		background-color: #e6a61d;
+		transform: translateY(-2px);
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	}
+
+	.btn-secondary {
+		background-color: transparent;
+		color: var(--text-light);
+		border: 2px solid var(--text-light);
+	}
+
+	.btn-secondary:hover {
+		background-color: rgba(255, 255, 255, 0.1);
+		transform: translateY(-2px);
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	}
+
+	section {
+		padding: 2rem;
+		margin: 0 auto;
+		max-width: 1200px;
+	}
+
+	h2 {
+		text-align: center;
+		margin-bottom: 2rem;
+		color: var(--primary-color);
+		position: relative;
+		padding-bottom: 0.5rem;
+	}
+
+	h2::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 80px;
+		height: 3px;
+		background-color: var(--accent-color);
+	}
+
+	.services-grid, .testimonial-grid, .service-area-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+		margin-bottom: 2rem;
+	}
+
+	.services-preview {
+		padding: 9rem 1rem;
+	}
+
+	.service-card {
+		background-color: #f9fafb;
+		border-radius: 8px;
+		padding: 1.5rem;
+		text-align: center;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		transition: transform 0.3s, box-shadow 0.3s;
+	}
+
+	.service-card:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+	}
+
+	.service-icon {
+		font-size: 2.5rem;
+		margin-bottom: 1rem;
+	}
+
+	.service-card h3 {
+		color: var(--primary-color);
+		margin-bottom: 0.5rem;
+	}
+
+	.services-link {
+		text-align: center;
+		margin-top: 2rem;
+	}
+
+	.services-link a {
+		color: var(--primary-color);
+		text-decoration: none;
+		font-weight: bold;
+		transition: color 0.3s;
+		padding-bottom: 2px;
+		border-bottom: 2px solid var(--primary-color);
+	}
+
+	.services-link a:hover {
+		color: var(--accent-color);
+	}
+
+	.about-preview {
+		background-color: var(--primary-color);
+		padding: 3rem 1rem;
+		color: var(--text-light);
+	}
+
+	.about-preview h2 {
+		color: var(--text-light);
+	}
+
+	.about-content {
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	.benefits-list {
+		margin: 2rem 0;
+		padding-left: 1.5rem;
+	}
+
+	.benefits-list li {
+		margin-bottom: 0.75rem;
+		font-size: 1.1rem;
+	}
+
+	.benefits-list li::marker {
+		color: var(--accent-color);
+	}
+
+	.learn-more {
+		display: inline-block;
+		color: var(--accent-color);
+		text-decoration: none;
+		font-weight: bold;
+		transition: color 0.3s;
+	}
+
+	.learn-more:hover {
+		text-decoration: underline;
+	}
+
+	.testimonial-card {
+		background-color: #f9fafb;
+		border-radius: 8px;
+		padding: 1.5rem;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		position: relative;
+	}
+
+	.testimonial-card::before {
+		content: '"';
+		position: absolute;
+		top: -5px;
+		left: 10px;
+		font-size: 4rem;
+		color: var(--accent-color);
+		opacity: 0.3;
+		font-family: serif;
+	}
+
+	.customer-name {
+		font-weight: bold;
+		text-align: right;
+		color: var(--secondary-color);
+	}
+
+	.contact-cta {
+		text-align: center;
+		background-color: var(--primary-color);
+		color: var(--text-light);
+		padding: 3rem 1rem;
+		max-width: 900px;
+		position: relative;
+		overflow: hidden;
+	}
+
+
+
+	.service-areas {
+		padding: 3rem 1rem;
+		border-radius: 8px;
+		max-width: 900px;
+		margin: 4rem auto;
+	}
+
+	.service-area-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+		margin-bottom: 2rem;
+	}
+	
+
+	.service-area-card {
+		background-color: #f9fafb;
+		border-radius: 8px;
+		padding: 1.5rem;
+		text-align: center;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	}
+
+	.contact-cta h2 {
+		color: var(--text-light);
+	}
+
+	@media (max-width: 768px) {
+		.logo {
+			font-size: 0.5rem;
+		}
+		
+		.hero h1 {
+			font-size: 2rem;
+		}
+
+		.hero p {
+			font-size: 1.2rem;
+		}
+
+		.hero-logo {
+			width: 150px;
+		}
+
+		.services-grid, .testimonial-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>
