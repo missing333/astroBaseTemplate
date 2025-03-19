@@ -253,7 +253,6 @@ document.addEventListener('DOMContentLoaded', () => {
         padding: 3rem 1rem;
         background-color: #f3f4f6;
         border-radius: 8px;
-        margin: 3rem 0;
     }
 
     .areas-grid {
@@ -281,13 +280,20 @@ document.addEventListener('DOMContentLoaded', () => {
         margin-bottom: 1.5rem;
     }
 
-    @media (max-width: 768px) {
-        .contact-container {
-            grid-template-columns: 1fr;
-        }
-
-        .info-item {
-            align-items: flex-start;
-        }
+@media (max-width: 768px) {
+    .contact-container {
+        grid-template-columns: 1fr;
     }
+
+    .info-item {
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 400px) {
+    .contact-container {
+        display: flex;
+        flex-direction: column;
+    }
+}
 </style> 
